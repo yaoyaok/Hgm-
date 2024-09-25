@@ -1,0 +1,802 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hgame站点發佈頁</title>
+    <style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2147483647;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .immersive-translate-attach-loading::after {
+      content: " ";
+    
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+    
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-2000%, -50%);
+      z-index: 100;
+    }
+    
+    .immersive-translate-loading-spinner {
+      vertical-align: middle !important;
+      width: 10px !important;
+      height: 10px !important;
+      display: inline-block !important;
+      margin: 0 4px !important;
+      border: 2px rgba(221, 244, 255, 0.6) solid !important;
+      border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+      animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+    }
+    
+    @-webkit-keyframes immersive-translate-loading-animation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+    
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+    
+    @keyframes immersive-translate-loading-animation {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    
+    .immersive-translate-input-loading {
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+    }
+    
+    @keyframes immersiveTranslateShadowRolling {
+      0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      12% {
+        box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      25% {
+        box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      36% {
+        box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      50% {
+        box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+      }
+    
+      62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+      }
+    
+      75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+      }
+    
+      87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+      }
+    
+      100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+      }
+    }
+    
+    
+    .immersive-translate-search-recomend {
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      font-size: 16px;
+    }
+    
+    .immersive-translate-search-enhancement-en-title {
+      color: #4d5156;
+    }
+    
+    
+    
+    .immersive-translate-search-settings {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+    /**
+    
+    .immersive-translate-search-title {}
+    
+    .immersive-translate-search-title-wrapper {}
+    
+    .immersive-translate-search-time {
+      font-size: 12px;
+      margin: 4px 0 24px;
+      color: #70757a;
+    }
+    
+    .immersive-translate-expand-items {
+      display: none;
+    }
+    
+    .immersive-translate-search-more {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    
+    .immersive-translate-modal {
+      display: none;
+      position: fixed;
+      z-index: 2147483647;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 15px;
+    }
+    
+    .immersive-translate-modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 40px 24px 24px;
+      border: 1px solid #888;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 270px;
+      font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+        "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+      position: relative
+    }
+    
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-content {
+        margin: 50% auto !important;
+      }
+    }
+    
+    .immersive-translate-modal .immersive-translate-modal-content-in-input {
+      max-width: 500px;
+    }
+    .immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+      text-align: left;
+      max-height: unset;
+    }
+    
+    .immersive-translate-modal-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #333333;
+    }
+    
+    .immersive-translate-modal-body {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #333333;
+      word-break: break-all;
+      margin-top: 24px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-body {
+        max-height: 250px;
+        overflow-y: auto;
+      }
+    }
+    
+    .immersive-translate-close {
+      color: #666666;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .immersive-translate-close:hover,
+    .immersive-translate-close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .immersive-translate-modal-footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    
+    .immersive-translate-btn {
+      width: fit-content;
+      color: #fff;
+      background-color: #ea4c89;
+      border: none;
+      font-size: 16px;
+      margin: 0 8px;
+      padding: 9px 30px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .immersive-translate-btn:hover {
+      background-color: #f082ac;
+    }
+    .immersive-translate-btn:disabled{
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .immersive-translate-btn:disabled:hover{
+      background-color: #ea4c89;
+    }
+    
+    
+    
+    
+    .immersive-translate-cancel-btn:hover {
+      background-color: hsl(205, 20%, 32%);
+    }
+    
+    .immersive-translate-action-btn {
+      background-color: transparent;
+      color: #EA4C89;
+      border: 1px solid #EA4C89
+    }
+    
+    .immersive-translate-btn svg {
+      margin-right: 5px;
+    }
+    
+    .immersive-translate-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #007bff;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    }
+    
+    .immersive-translate-primary-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #ea4c89;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    }
+    
+    .immersive-translate-modal input[type="radio"] {
+      margin: 0 6px;
+      cursor: pointer;
+    }
+    
+    .immersive-translate-modal label {
+      cursor: pointer;
+    }
+    
+    .immersive-translate-close-action {
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      cursor: pointer;
+    }
+    </style></head><body cz-shortcut-listen="true"><span id="js_output_html"></span>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>1_8_A_V_發佈頁</title>
+    <style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 2147483647;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .immersive-translate-attach-loading::after {
+      content: " ";
+    
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+    
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-2000%, -50%);
+      z-index: 100;
+    }
+    
+    .immersive-translate-loading-spinner {
+      vertical-align: middle !important;
+      width: 10px !important;
+      height: 10px !important;
+      display: inline-block !important;
+      margin: 0 4px !important;
+      border: 2px rgba(221, 244, 255, 0.6) solid !important;
+      border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+      border-radius: 50% !important;
+      padding: 0 !important;
+      -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+      animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+    }
+    
+    @-webkit-keyframes immersive-translate-loading-animation {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+    
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+    
+    @keyframes immersive-translate-loading-animation {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    
+    .immersive-translate-input-loading {
+      --loading-color: #f78fb6;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      display: block;
+      margin: 12px auto;
+      position: relative;
+      color: white;
+      left: -100px;
+      box-sizing: border-box;
+      animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+    }
+    
+    @keyframes immersiveTranslateShadowRolling {
+      0% {
+        box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      12% {
+        box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      25% {
+        box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      36% {
+        box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+      }
+    
+      50% {
+        box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+      }
+    
+      62% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+      }
+    
+      75% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+      }
+    
+      87% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+      }
+    
+      100% {
+        box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+      }
+    }
+    
+    
+    .immersive-translate-search-recomend {
+      border: 1px solid #dadce0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      font-size: 16px;
+    }
+    
+    .immersive-translate-search-enhancement-en-title {
+      color: #4d5156;
+    }
+    
+    
+    
+    .immersive-translate-search-settings {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      cursor: pointer;
+    }
+    
+    
+    
+    .immersive-translate-search-title {}
+    
+    .immersive-translate-search-title-wrapper {}
+    
+    .immersive-translate-search-time {
+      font-size: 12px;
+      margin: 4px 0 24px;
+      color: #70757a;
+    }
+    
+    .immersive-translate-expand-items {
+      display: none;
+    }
+    
+    .immersive-translate-search-more {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    
+    .immersive-translate-modal {
+      display: none;
+      position: fixed;
+      z-index: 2147483647;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 15px;
+    }
+    
+    .immersive-translate-modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 40px 24px 24px;
+      border: 1px solid #888;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 270px;
+      font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+        "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+      position: relative
+    }
+    
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-content {
+        margin: 50% auto !important;
+      }
+    }
+    
+    .immersive-translate-modal .immersive-translate-modal-content-in-input {
+      max-width: 500px;
+    }
+    .immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+      text-align: left;
+      max-height: unset;
+    }
+    
+    .immersive-translate-modal-title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #333333;
+    }
+    
+    .immersive-translate-modal-body {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #333333;
+      word-break: break-all;
+      margin-top: 24px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .immersive-translate-modal-body {
+        max-height: 250px;
+        overflow-y: auto;
+      }
+    }
+    
+    .immersive-translate-close {
+      color: #666666;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .immersive-translate-close:hover,
+    .immersive-translate-close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .immersive-translate-modal-footer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    
+    .immersive-translate-btn {
+      width: fit-content;
+      color: #fff;
+      background-color: #ea4c89;
+      border: none;
+      font-size: 16px;
+      margin: 0 8px;
+      padding: 9px 30px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .immersive-translate-btn:hover {
+      background-color: #f082ac;
+    }
+    .immersive-translate-btn:disabled{
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .immersive-translate-btn:disabled:hover{
+      background-color: #ea4c89;
+    }
+    
+    
+    
+    
+    .immersive-translate-cancel-btn:hover {
+      background-color: hsl(205, 20%, 32%);
+    }
+    
+    .immersive-translate-action-btn {
+      background-color: transparent;
+      color: #EA4C89;
+      border: 1px solid #EA4C89
+    }
+    
+    .immersive-translate-btn svg {
+      margin-right: 5px;
+    }
+    
+    .immersive-translate-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #007bff;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    }
+    
+    .immersive-translate-primary-link {
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      text-decoration: none;
+      color: #ea4c89;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+    }
+    
+    .immersive-translate-modal input[type="radio"] {
+      margin: 0 6px;
+      cursor: pointer;
+    }
+    
+    .immersive-translate-modal label {
+      cursor: pointer;
+    }
+    
+    .immersive-translate-close-action {
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      cursor: pointer;
+    }
+    </style></head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Hgame站点發佈頁</title>
+<style>
+.category{width:962px;margin:0 auto;padding-top:2px;overflow:hidden;}
+.categoryone{height:27px;background:green;display:none;}
+.categorytwo{height:64px;border:1px solid #9BCBF6;background:yellow;margin-bottom:10px;display:none;}
+.categorythr{border:1px solid #9BCBF6;overflow:hidden;}
+.categoryfor{text-align:center;color:#656666;margin-top:20px;}
+.categoryfor a:hover{color:red;text-decoration:underline;}
+.list{width:958px;margin:1px;overflow:hidden;}
+.heading{height:50px;padding-left:12px;font-weight:bold;font-size:28px;line-height:50px;background:hsl(313, 71%, 74%);text-align:center;}
+.title{height:27px;padding-left:12px;font-weight:bold;font-size:14px;line-height:26px;background:#EEF7FF;margin-bottom:}
+.list ul{padding-left:10px;padding-right:12px;backrground:#FCFEFC;}
+.list li{list-style:none;float:left;margin-right:30px;}
+.list a{font-size:14px;color:#04529C;text-align:left;line-height:30px;letter-spacing:1px;}
+.list a:hover{color:red;text-decoration:underline;}
+*{scrollbar-base-color:#F8F8F8;scrollbar-arrow-color:#698CC3;font-size:12px;font-family:Verdana;font-weight:normal;margin:0px;text-decoration:none;}
+
+.redbig {
+	font-size:30px;color:red;
+    animation-duration: 0.9s;     /*animation-duration 指run一個循環所需的時間。*/
+    animation-name: redbig;		  /*animation-name: blink; 呼叫底下的 @keyframes redbig */
+    animation-iteration-count: infinite; /*animation-iteration-count: infinite; 表示無限循環。*/
+    }
+
+@keyframes redbig {
+    0% {opacity: 1; }
+    60% { opacity: 1;}
+    80% { opacity: 0;}
+}
+
+
+body{margin:0px;padding:0px;}
+frame{margin:0px;}
+li,ul{margin:0px;padding:0px;}
+
+.text_decoration {text-decoration:line-through;}
+
+</style>
+
+
+
+
+
+	<div class="category"><br>
+		<div class="categorythr">
+			
+			<div class="list">
+				<h3 class="heading">通过电子邮件自动回覆获取网址与本頁面訊息同步</h3>
+				<ul>
+					<li>请发送邮件到  <a href="mailto:kdy980225@gmail.com" target="_blank"> kdy980225@gmail.com</a> 获取最新网站网址。 </li>
+				</ul>
+			</div><br><br><br>
+			
+			
+			<div class="list">
+				<h3 class="heading">【地址发布页】</h3>
+				<h3 class="title"><span style="color:#E53333;"><strong>[永][久]有效！</strong></span></h3>
+				<ul>
+					<li><a href="https://yaoyaok.github.io/Hgm-Point/" target="_blank">Hgm-Point</a></li>				</ul>
+			</div>
+			
+			<div class="list">
+				<h3 class="title">可访问地址</h3>
+				<ul>
+					<li><a href="https://yaoyaok.github.io/Hgm-Point/" target="_blank">Hgm-Point</a> <span class="redbig">[2024/09/25新增]</span></li>	</ul>
+			</div>
+			
+			<div class="list">
+				<h3 class="title">访问地址</h3>
+				<ul>
+									</ul>
+			</div><br><br><br>
+			
+			<div class="list">
+				<h3 class="heading">【Hgame站点】</h3>
+				<h3 class="title"><span style="color:#E53333;"><strong>[永][久]有效！</strong></span></h3>
+				<ul>
+					<li><a href="https://hx3x.me" target="_blank">hx3x.me</a></li>				</ul>
+			</div>
+			
+			<div class="list">
+				<h3 class="title">可访问地址</h3>
+				<ul>
+					<li><a href="https://hx3x.me" target="_blank">hx3x.me</a> <span class="redbig">[2024/09/25新增]</span></li></ul>
+			</div>
+			
+			<div class="list">
+				<h3 class="title">访问地址</h3>
+				<ul>
+					<li><a class="text_decoration" href="#" target="_blank">###</a> </li>				</ul>
+				
+				
+			</div><br><br><br>
+			
+            <!--
+			<div class="list">
+				<h3 class="heading">【JavBooks種子站】</h3>
+				<h3 class="title"><span style="color:#E53333;"><strong>[永][久]有效！</strong></span></h3>
+				<ul>
+					<li><a href="https://javbooks.com" target="_blank">javbooks.com</a></li><li><a href="https://jmvbt.com" target="_blank">jmvbt.com</a></li>				</ul>
+			</div>
+			
+			<div class="list">
+				<h3 class="title">可访问地址</h3>
+				<ul>
+					<li><a href="https://jbk007.cc" target="_blank">jbk007.cc</a> <span class="redbig">[2024/09/25新增]</span></li><li><a href="https://jbk006.cc" target="_blank">jbk006.cc</a> </li><li><a href="https://jbk005.cc" target="_blank">jbk005.cc</a> </li><li><a href="https://jbk004.cc" target="_blank">jbk004.cc</a> </li><li><a href="https://jbk003.cc" target="_blank">jbk003.cc</a> </li><li><a href="https://jbk001.cc" target="_blank">jbk001.cc</a> </li>				</ul>
+			</div>
+
+			<div class="list">
+				<h3 class="title">访问地址</h3>
+				<ul>
+					<li><a class="text_decoration" href="https://jbk002.cc" target="_blank">jbk002.cc</a> </li>				</ul>
+			</div><br><br><br>
+			
+			-->
+			<div class="list">
+				<h3 class="heading">【更新历史】</h3>
+				<ul>
+					<li><div class="categoryfor">地址发布页.更新历史[2024.0925]</div></li>
+				</ul>
+			</div><br><br>
+			
+		
+		 
+	</div>
+	
+	<br><br><br><br>
+			
+	
+
+</div></body>
